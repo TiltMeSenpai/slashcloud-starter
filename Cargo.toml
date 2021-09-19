@@ -1,0 +1,20 @@
+[package]
+name = "cloudflare-bot"
+version = "0.1.0"
+authors = ["Josh Koike <jk@tilting.me>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+default = []
+
+[dependencies]
+worker = "0.0.6"
+cloudflare-slash = {git = "https://github.com/tiltmesenpai/cloudflare-rust"}
+serde_json = "1.0.67"
+
+[profile.release]
+# Tell `rustc` to optimize for small code size.
+opt-level = "s"
