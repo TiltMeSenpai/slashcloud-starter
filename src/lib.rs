@@ -3,7 +3,9 @@ use cloudflare_slash::*;
 
 #[derive(CommandOption)]
 pub enum PingCommand{
+    #[description = "Ping command"]
     Ping {
+        #[description = "Echo value"]
         echo: String
     }
 }
