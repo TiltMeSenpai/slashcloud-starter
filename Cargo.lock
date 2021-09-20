@@ -87,7 +87,7 @@ dependencies = [
 [[package]]
 name = "cloudflare-slash"
 version = "0.1.0"
-source = "git+https://github.com/tiltmesenpai/cloudflare-rust#ac3824bdc6556b75467cde76c6e216a808768b47"
+source = "git+https://github.com/tiltmesenpai/cloudflare-rust#98f28e4068a2ada03bd8fdf56c5085fa63630fbc"
 dependencies = [
  "console_error_panic_hook",
  "hex",
@@ -297,7 +297,7 @@ dependencies = [
 [[package]]
 name = "macros"
 version = "0.1.0"
-source = "git+https://github.com/tiltmesenpai/cloudflare-rust#ac3824bdc6556b75467cde76c6e216a808768b47"
+source = "git+https://github.com/tiltmesenpai/cloudflare-rust#98f28e4068a2ada03bd8fdf56c5085fa63630fbc"
 dependencies = [
  "heck",
  "proc-macro2",
