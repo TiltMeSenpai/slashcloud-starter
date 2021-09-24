@@ -1,5 +1,5 @@
 use worker::*;
-use cloudflare_slash::*;
+use slashcloud::*;
 
 #[derive(CommandOption)]
 pub enum PingCommand{

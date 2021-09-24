@@ -79,36 +79,9 @@ dependencies = [
 name = "cloudflare-bot"
 version = "0.1.0"
 dependencies = [
- "cloudflare-slash",
  "serde_json",
+ "slashcloud",
  "worker",
-]
-
-[[package]]
-name = "cloudflare-slash"
-version = "0.1.0"
-source = "git+https://github.com/tiltmesenpai/cloudflare-rust#98f28e4068a2ada03bd8fdf56c5085fa63630fbc"
-dependencies = [
- "console_error_panic_hook",
- "hex",
- "js-sys",
- "macros",
- "serde",
- "serde_json",
- "serde_repr",
- "wasm-bindgen",
- "web-sys",
- "worker",
-]
-
-[[package]]
-name = "console_error_panic_hook"
-version = "0.1.6"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b8d976903543e0c48546a91908f21588a680a8c8f984df9a5d69feccb2b2a211"
-dependencies = [
- "cfg-if 0.1.10",
- "wasm-bindgen",
 ]
 
 [[package]]
@@ -238,9 +211,9 @@ checksum = "7f24254aa9a54b5c858eaee2f5bccdb46aaf0e486a595ed5fd8f86ba55232a70"
 
 [[package]]
 name = "http"
-version = "0.2.4"
+version = "0.2.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "527e8c9ac747e28542699a951517aa9a6945af506cd1f2e1b53a576c17b6cc11"
+checksum = "1323096b05d41827dadeaee54c9981958c0f94e670bc94ed80037d1a7b8b186b"
 dependencies = [
  "bytes",
  "fnv",
@@ -297,7 +270,7 @@ dependencies = [
 [[package]]
 name = "macros"
 version = "0.1.0"
-source = "git+https://github.com/tiltmesenpai/cloudflare-rust#98f28e4068a2ada03bd8fdf56c5085fa63630fbc"
+source = "git+https://github.com/tiltmesenpai/slashcloud#57d4c289a555ebc71cf2e18fafb4446e2dc25e83"
 dependencies = [
  "heck",
  "proc-macro2",
@@ -477,10 +450,26 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c307a32c1c5c437f38c7fd45d753050587732ba8628319fbdf12a7e289ccc590"
 
 [[package]]
+name = "slashcloud"
+version = "0.1.0"
+source = "git+https://github.com/tiltmesenpai/slashcloud#57d4c289a555ebc71cf2e18fafb4446e2dc25e83"
+dependencies = [
+ "hex",
+ "js-sys",
+ "macros",
+ "serde",
+ "serde_json",
+ "serde_repr",
+ "wasm-bindgen",
+ "web-sys",
+ "worker",
+]
+
+[[package]]
 name = "syn"
-version = "1.0.76"
+version = "1.0.77"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c6f107db402c2c2055242dbf4d2af0e69197202e9faacbef9571bbe47f5a1b84"
+checksum = "5239bc68e0fef57495900cfea4e8dc75596d9a319d7e16b1e0a440d24e6fe0a0"
 dependencies = [
  "proc-macro2",
  "quote",

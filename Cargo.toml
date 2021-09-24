@@ -12,7 +12,7 @@ default = []
 
 [dependencies]
 worker = "0.0.6"
-cloudflare-slash = {git = "https://github.com/tiltmesenpai/cloudflare-rust"}
+slashcloud = {git = "https://github.com/tiltmesenpai/slashcloud"}
 serde_json = "1.0.67"
 
 [profile.release]
