@@ -1,1 +1,0 @@
-{"type":1,"description":"ping","name":"ping","options":[{"type": "3","description":"Echoed value","name":"echo","required":true}]}
