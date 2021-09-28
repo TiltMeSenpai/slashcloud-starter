@@ -25,8 +25,8 @@ jobs:
           "x": "$(echo $DISCORD_PUBKEY | xxd -r -p | base64)",
           "use": "verify"
         }
-        echo $DISCORD_JWK | wrangler secret put "DISCORD_PUBKEY"
         """
+        echo $DISCORD_JWK | wrangler secret put "DISCORD_PUBKEY"
       env:
         CF_API_TOKEN:   ${{ secrets.CF_API_TOKEN }}
         DISCORD_TOKEN:  ${{ secrets.DISCORD_TOKEN  }}
