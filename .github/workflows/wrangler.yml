@@ -23,3 +23,4 @@ jobs:
         DISCORD_TOKEN:  ${{ secrets.DISCORD_TOKEN  }}
         DISCORD_APPID:  ${{ secrets.DISCORD_APPID  }}
         DISCORD_PUBKEY: ${{ secrets.DISCORD_PUBKEY }}
+      preCommands: cargo install worker-build
