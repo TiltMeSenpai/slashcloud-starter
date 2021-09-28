@@ -254,9 +254,9 @@ checksum = "e2abad23fbc42b3700f2f279844dc832adb2b2eb069b2df918f455c4e18cc646"
 
 [[package]]
 name = "libc"
-version = "0.2.102"
+version = "0.2.103"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a2a5ac8f984bfcf3a823267e5fde638acc3325f6496633a5da6bb6eb2171e103"
+checksum = "dd8f7255a17a627354f321ef0055d63b898c6fb27eff628af4d1b66b7331edf6"
 
 [[package]]
 name = "log"
@@ -270,7 +270,7 @@ dependencies = [
 [[package]]
 name = "macros"
 version = "0.1.0"
-source = "git+https://github.com/tiltmesenpai/slashcloud#57d4c289a555ebc71cf2e18fafb4446e2dc25e83"
+source = "git+https://github.com/tiltmesenpai/slashcloud#e94359672cc014b33845a3dd4b7d3c070f4c2e70"
 dependencies = [
  "heck",
  "proc-macro2",
@@ -452,7 +452,7 @@ checksum = "c307a32c1c5c437f38c7fd45d753050587732ba8628319fbdf12a7e289ccc590"
 [[package]]
 name = "slashcloud"
 version = "0.1.0"
-source = "git+https://github.com/tiltmesenpai/slashcloud#57d4c289a555ebc71cf2e18fafb4446e2dc25e83"
+source = "git+https://github.com/tiltmesenpai/slashcloud#e94359672cc014b33845a3dd4b7d3c070f4c2e70"
 dependencies = [
  "hex",
  "js-sys",
@@ -498,9 +498,9 @@ dependencies = [
 
 [[package]]
 name = "tinyvec"
-version = "1.4.0"
+version = "1.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "5241dd6f21443a3606b432718b166d3cedc962fd4b8bea54a8bc7f514ebda986"
+checksum = "f83b2a3d4d9091d0abd7eba4dc2710b1718583bd4d8992e2190720ea38f391f7"
 dependencies = [
  "tinyvec_macros",
 ]
