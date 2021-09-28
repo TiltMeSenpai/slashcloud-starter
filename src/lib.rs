@@ -11,7 +11,7 @@ pub enum PingCommand{
 }
 
 impl CommandHandler for PingCommand {
-    fn handle(&self, _req: InteractionRequest) -> InteractionResponse{
+    fn handle(&self, _req: InteractionRequest) -> InteractionResponse {
         match self {
             PingCommand::Ping{echo} => {
                 InteractionResponse::message()
