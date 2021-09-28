@@ -16,6 +16,17 @@ jobs:
       run: |
         cargo install wrangler worker-build
         wrangler publish
+        echo $DISCORD_TOKEN | wrangler secret put "DISCORD_TOKEN"
+        echo $DISCORD_APPID | wrangler secret put "DISCORD_APPID"
+        export DISCORD_JWK="""
+        {
+          "kty": "OKP",
+          "crv": "Ed25519",
+          "x": "$(echo $DISCORD_PUBKEY | xxd -r -p | base64)",
+          "use": "verify"
+        }
+        echo $DISCORD_JWK | wrangler secret put "DISCORD_PUBKEY"
+        """
       env:
         CF_API_TOKEN:   ${{ secrets.CF_API_TOKEN }}
         DISCORD_TOKEN:  ${{ secrets.DISCORD_TOKEN  }}
