@@ -22,6 +22,12 @@ impl CommandHandler for PingCommand {
 }
 
 #[event(fetch)]
-pub async fn main(req: Request, env: Env) -> Result<Response> {
+pub async fn handle(req: Request, env: Env) -> Result<Response> {
     handle_request::<PingCommand>(req, env).await
+}
+
+#[cfg(not(target_arch = "wasm32"))]
+pub fn gen_json() {
+    slashcloud::gen_command_json::<PingCommand>();
+    slashcloud::gen_bulk_command_json::<PingCommand>();
 }
