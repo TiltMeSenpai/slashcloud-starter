@@ -27,7 +27,7 @@ jobs:
           \"kty\": \"OKP\",
           \"crv\": \"Ed25519\",
           \"x\": \"$(echo $DISCORD_PUBKEY | xxd -r -p | base64)\",
-          \"use\": \"verify\"
+          \"use\": \"sig\"
         }
         """
         echo $DISCORD_JWK | wrangler secret put "DISCORD_PUBKEY"
