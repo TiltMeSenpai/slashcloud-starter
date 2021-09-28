@@ -7,7 +7,7 @@ do
     curl --data "@commands/$FILE" \
     -H "Authorization: Bot $DISCORD_TOKEN" \
     -H "Content-Type: application/json" \
-    "https://discord.com/api/v9/applications/$APPLICATION_ID/guilds/884941294303051827/commands";
+    "https://discord.com/api/v9/applications/$APPLICATION_ID/commands";
     echo "";
 done
 
