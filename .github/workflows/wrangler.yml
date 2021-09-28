@@ -24,10 +24,10 @@ jobs:
         echo $DISCORD_APPID | wrangler secret put "DISCORD_APPID"
         export DISCORD_JWK="""
         {
-          "kty": "OKP",
-          "crv": "Ed25519",
-          "x": "$(echo $DISCORD_PUBKEY | xxd -r -p | base64)",
-          "use": "verify"
+          \"kty\": \"OKP\",
+          \"crv\": \"Ed25519\",
+          \"x\": \"$(echo $DISCORD_PUBKEY | xxd -r -p | base64)\",
+          \"use\": \"verify\"
         }
         """
         echo $DISCORD_JWK | wrangler secret put "DISCORD_PUBKEY"
