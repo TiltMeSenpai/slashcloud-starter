@@ -15,6 +15,7 @@ jobs:
     - name: Publish
       uses: cloudflare/wrangler-action@1.2.0
       with:
+        preCommands: cargo install worker-build
         apiToken: ${{ secrets.CF_API_TOKEN }}
         secrets: |
           DISCORD_TOKEN
@@ -24,4 +25,3 @@ jobs:
         DISCORD_TOKEN:  ${{ secrets.DISCORD_TOKEN  }}
         DISCORD_APPID:  ${{ secrets.DISCORD_APPID  }}
         DISCORD_PUBKEY: ${{ secrets.DISCORD_PUBKEY }}
-      preCommands: cargo install worker-build
