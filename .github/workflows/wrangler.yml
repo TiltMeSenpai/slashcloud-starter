@@ -20,6 +20,8 @@ jobs:
           curl https://sh.rustup.rs -sSf | sh -s -- -y
           source $HOME/.cargo/env
           cargo install worker-build
+          npm i -g wasm-pack
+          export PATH="$PATH:/github/workspace/.cache/.wasm-pack/.wasm-bindgen-cargo-install-0.2.78/bin/"
         apiToken: ${{ secrets.CF_API_TOKEN }}
         secrets: |
           DISCORD_TOKEN
