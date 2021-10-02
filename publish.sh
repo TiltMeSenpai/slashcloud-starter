@@ -1,17 +1,18 @@
 #!/bin/bash
-for FILE in $(ls commands)
-do
-    echo "Uploading $FILE";
-    DATA=$(cat commands/$FILE)
-    echo "Command: $DATA"
-    curl --data "@commands/$FILE" \
-    -H "Authorization: Bot $DISCORD_TOKEN" \
-    -H "Content-Type: application/json" \
-    "https://discord.com/api/v9/applications/$APPLICATION_ID/commands";
-    echo "";
-done
+
+source .env
+
+echo "Uploading $FILE";
+DATA=$(cat commands/$FILE)
+echo "Command: $DATA"
+curl --data "@commands.json" \
+-H "Authorization: Bot $DISCORD_TOKEN" \
+-H "Content-Type: application/json" \
+-X PUT \
+"https://discord.com/api/v9/applications/$DISCORD_APPID/guilds/836386335840665610/commands";
+echo "";
 
 echo "Commands: "
 
 curl -H "Authorization: Bot $DISCORD_TOKEN" \
-"https://discord.com/api/applications/$APPLICATION_ID/commands";
+"https://discord.com/api/applications/$DISCORD_APPID/commands";

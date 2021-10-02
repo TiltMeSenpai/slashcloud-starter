@@ -270,7 +270,7 @@ dependencies = [
 [[package]]
 name = "macros"
 version = "0.1.0"
-source = "git+https://github.com/tiltmesenpai/slashcloud#ae8ca93764a2f362b3141d6a946ce327fd40b6d6"
+source = "git+https://github.com/tiltmesenpai/slashcloud#7e16acdeb1d3cc0183d5f07373835770e741f8a1"
 dependencies = [
  "heck",
  "proc-macro2",
@@ -411,6 +411,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "serde-wasm-bindgen"
+version = "0.3.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "618365e8e586c22123d692b72a7d791d5ee697817b65a218cdf12a98870af0f7"
+dependencies = [
+ "fnv",
+ "js-sys",
+ "serde",
+ "wasm-bindgen",
+]
+
+[[package]]
 name = "serde_derive"
 version = "1.0.130"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -452,17 +464,21 @@ checksum = "c307a32c1c5c437f38c7fd45d753050587732ba8628319fbdf12a7e289ccc590"
 [[package]]
 name = "slashcloud"
 version = "0.1.0"
-source = "git+https://github.com/tiltmesenpai/slashcloud#ae8ca93764a2f362b3141d6a946ce327fd40b6d6"
+source = "git+https://github.com/tiltmesenpai/slashcloud#7e16acdeb1d3cc0183d5f07373835770e741f8a1"
 dependencies = [
+ "async-trait",
  "hex",
  "js-sys",
  "macros",
  "serde",
+ "serde-wasm-bindgen",
  "serde_json",
  "serde_repr",
  "wasm-bindgen",
+ "wasm-bindgen-futures",
  "web-sys",
  "worker",
+ "worker-sys",
 ]
 
 [[package]]

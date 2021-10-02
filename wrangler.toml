@@ -10,6 +10,11 @@ WORKERS_RS_VERSION = "0.0.6"
 [build]
 command = "worker-build --release" # required
 
+[durable_objects]
+bindings = [
+    { name = "DISCORD_RATELIMITER", class_name = "RateLimiter"}
+]
+
 [build.upload]
 dir    = "build/worker"
 format = "modules"
@@ -21,3 +26,7 @@ type  = "CompiledWasm"
 
 # read more about configuring your Worker via wrangler.toml at:
 # https://developers.cloudflare.com/workers/cli-wrangler/configuration
+
+[[migrations]]
+tag = "v1"
+new_classes = ["RateLimiter"]

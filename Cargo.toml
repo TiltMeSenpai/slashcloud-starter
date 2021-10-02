@@ -12,7 +12,7 @@ default = []
 
 [dependencies]
 worker = "0.0.6"
-slashcloud = {git = "https://github.com/tiltmesenpai/slashcloud"}
+slashcloud = {git = "https://github.com/tiltmesenpai/slashcloud", features = ["guild"]}
 serde_json = "1.0.67"
 
 [profile.release]
