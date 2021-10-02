@@ -270,7 +270,7 @@ dependencies = [
 [[package]]
 name = "macros"
 version = "0.1.0"
-source = "git+https://github.com/tiltmesenpai/slashcloud#b88ef24433e78508e144301d54bbb0b1d04463f7"
+source = "git+https://github.com/tiltmesenpai/slashcloud#abd4449910cab2aefc1da1ac8c6945b3f6bb8a1d"
 dependencies = [
  "heck",
  "proc-macro2",
@@ -464,7 +464,7 @@ checksum = "c307a32c1c5c437f38c7fd45d753050587732ba8628319fbdf12a7e289ccc590"
 [[package]]
 name = "slashcloud"
 version = "0.1.0"
-source = "git+https://github.com/tiltmesenpai/slashcloud#b88ef24433e78508e144301d54bbb0b1d04463f7"
+source = "git+https://github.com/tiltmesenpai/slashcloud#abd4449910cab2aefc1da1ac8c6945b3f6bb8a1d"
 dependencies = [
  "async-trait",
  "hex",
